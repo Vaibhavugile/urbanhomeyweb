@@ -4,6 +4,7 @@ import React,{
 } from "react";
 
 import {
+    useNavigate,
     useParams,
 } from "react-router-dom";
 
@@ -11,14 +12,17 @@ import PageLayout from "../../layout/PageLayout";
 
 import {
     getFlatmateProfileById,
+    deleteFlatmateProfile,
 } from "./FlatmateDetailsService";
 
 import "./FlatmateDetails.css";
 
 function FlatmateDetails(){
 
-    const { profileId } =
-        useParams();
+   const { uid, profileId } =
+    useParams();
+
+const navigate = useNavigate();
 
     const [profile,setProfile] =
         useState(null);
@@ -30,14 +34,17 @@ function FlatmateDetails(){
 
         loadProfile();
 
-    },[profileId]);
+   }, [uid, profileId]);
 
     async function loadProfile(){
 
         setLoading(true);
 
         const data =
-            await getFlatmateProfileById(profileId);
+    await getFlatmateProfileById(
+        uid,
+        profileId
+    );
 
         setProfile(data);
 
@@ -1190,22 +1197,36 @@ function FlatmateDetails(){
 
     <button
       className="admin-btn red"
-      onClick={() => {
+      onClick={async () => {
 
-        if (
-          window.confirm(
-            "Delete this flatmate profile?"
-          )
-        ) {
+    const confirmed = window.confirm(
+        "Are you sure you want to permanently delete this flatmate profile?"
+    );
 
-          console.log(
-            "Delete Profile",
-            profile.documentId
-          );
+    if (!confirmed) return;
 
-        }
+    const result =
+        await deleteFlatmateProfile(
+            uid,
+            profileId
+        );
 
-      }}
+    if (result.success) {
+
+        alert(result.message);
+
+        navigate("/admin/flatmates");
+
+    } else {
+
+        alert(
+            result.message ||
+            "Failed to delete flatmate profile."
+        );
+
+    }
+
+}}
     >
       🗑
       <span>Delete Profile</span>

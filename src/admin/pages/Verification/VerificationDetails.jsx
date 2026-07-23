@@ -147,11 +147,21 @@ async function handleReject() {
 
         </div>
 
-        <span className="document-status">
-
-          Pending Review
-
-        </span>
+      <span
+  className={`document-status ${
+    user.verification?.verificationStatus === "approved"
+      ? "approved"
+      : user.verification?.verificationStatus === "rejected"
+      ? "rejected"
+      : "pending"
+  }`}
+>
+  {user.verification?.verificationStatus === "approved"
+    ? "✅ Approved"
+    : user.verification?.verificationStatus === "rejected"
+    ? "❌ Rejected"
+    : "🟡 Pending Review"}
+</span>
 
       </div>
 
@@ -231,11 +241,21 @@ async function handleReject() {
 
         </div>
 
-        <span className="document-status">
-
-          Pending Review
-
-        </span>
+        <span
+  className={`document-status ${
+    user.verification?.verificationStatus === "approved"
+      ? "approved"
+      : user.verification?.verificationStatus === "rejected"
+      ? "rejected"
+      : "pending"
+  }`}
+>
+  {user.verification?.verificationStatus === "approved"
+    ? "✅ Approved"
+    : user.verification?.verificationStatus === "rejected"
+    ? "❌ Rejected"
+    : "🟡 Pending Review"}
+</span>
 
       </div>
 

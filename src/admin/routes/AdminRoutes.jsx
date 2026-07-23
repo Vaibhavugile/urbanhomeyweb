@@ -106,7 +106,7 @@ function AdminRoutes() {
 />
 
 <Route
-    path="flatmates/:profileId"
+    path="flatmates/:uid/:profileId"
     element={<FlatmateDetails />}
 />
 <Route

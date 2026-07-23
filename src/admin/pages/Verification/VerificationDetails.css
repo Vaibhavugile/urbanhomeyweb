@@ -945,7 +945,20 @@
     font-size:14px;
 
 }
+.document-status.approved {
+  background: #dcfce7;
+  color: #15803d;
+}
 
+.document-status.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.document-status.rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+}
 .action-btn{
 
     width:100%;

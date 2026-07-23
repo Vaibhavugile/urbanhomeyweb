@@ -1,4 +1,4 @@
-import React,{
+import React, {
   useEffect,
   useState,
 } from "react";
@@ -6,7 +6,6 @@ import React,{
 import { useNavigate } from "react-router-dom";
 
 import PageLayout from "../../layout/PageLayout";
-
 import TableLayout from "../../components/table/TableLayout";
 
 import {
@@ -19,165 +18,223 @@ import {
 
 import "./Verification.css";
 
-function Verification(){
+function Verification() {
 
-  const navigate =
-      useNavigate();
+  const navigate = useNavigate();
 
-  const [users,setUsers] =
-      useState([]);
+  const [users, setUsers] = useState([]);
 
-  const [loading,setLoading] =
-      useState(true);
+  const [loading, setLoading] =
+    useState(true);
 
-  const [search,setSearch] =
-      useState("");
-const [statusFilter, setStatusFilter] =
+  const [search, setSearch] =
+    useState("");
+
+  const [statusFilter, setStatusFilter] =
     useState("all");
-  useEffect(()=>{
 
-      loadUsers();
+  useEffect(() => {
 
-  },[]);
+    loadUsers();
 
-  async function loadUsers(){
+  }, []);
 
-      try{
+  async function loadUsers() {
 
-          setLoading(true);
+    try {
 
-          const data =
-              await getVerificationRequests();
+      setLoading(true);
 
-          setUsers(data);
+      const data =
+        await getVerificationRequests();
 
-      }
+      setUsers(data);
 
-      finally{
+    } finally {
 
-          setLoading(false);
+      setLoading(false);
 
-      }
+    }
 
   }
+
+  /* ==========================================
+      FILTER USERS
+  ========================================== */
 
   const filteredUsers = users.filter((user) => {
 
     const keyword =
-        search.toLowerCase();
+      search.toLowerCase();
 
     const matchesSearch =
 
-        user.name
-            ?.toLowerCase()
-            .includes(keyword)
+      user.name
+        ?.toLowerCase()
+        .includes(keyword)
 
-        ||
+      ||
 
-        user.phoneNumber
-            ?.toLowerCase()
-            .includes(keyword)
+      user.phoneNumber
+        ?.toLowerCase()
+        .includes(keyword)
 
-        ||
+      ||
 
-        user.city
-            ?.toLowerCase()
-            .includes(keyword);
+      user.city
+        ?.toLowerCase()
+        .includes(keyword);
 
     const status =
-        (user.verificationStatus || "")
-            .toLowerCase();
+      (
+        user.verification?.verificationStatus ||
+        "not_verified"
+      ).toLowerCase();
 
     let matchesStatus = true;
 
-    switch(statusFilter){
+    switch (statusFilter) {
 
-        case "pending":
+      case "pending":
 
-            matchesStatus =
-                status === "pending";
+        matchesStatus =
+          status === "pending";
 
-            break;
+        break;
 
-        case "verified":
+      case "verified":
 
-            matchesStatus =
-                user.isVerified;
+        matchesStatus =
+          user.isVerified === true;
 
-            break;
+        break;
 
-        case "rejected":
+      case "rejected":
 
-            matchesStatus =
-                status === "rejected";
+        matchesStatus =
+          status === "rejected";
 
-            break;
+        break;
 
-        case "not_verified":
+      case "not_verified":
 
-            matchesStatus =
-                status === "not_verified";
+        matchesStatus =
+          status === "not_verified";
 
-            break;
+        break;
 
-        default:
+      default:
 
-            matchesStatus = true;
+        matchesStatus = true;
 
     }
 
     return matchesSearch && matchesStatus;
 
-});
+  });
+
+  /* ==========================================
+      SORT BY SUBMITTED DATE (NEWEST FIRST)
+  ========================================== */
+
+  const sortedUsers = [...filteredUsers].sort(
+    (a, b) => {
+
+      const aTime =
+        a.verification?.submittedAt?.toMillis?.() || 0;
+
+      const bTime =
+        b.verification?.submittedAt?.toMillis?.() || 0;
+
+      return bTime - aTime;
+
+    }
+  );
 
   const columns =
-      verificationColumns({
+    verificationColumns({
 
-          onView:(user)=>{
+      onView: (user) => {
 
-              navigate(
-                  `/admin/verification/${user.documentId}`
-              );
+        navigate(
+          `/admin/verification/${user.documentId}`
+        );
 
-          },
+      },
 
-      });
+    });
 
-  return(
+  return (
 
-      <PageLayout
+    <PageLayout
+      title="Verification"
+      subtitle="Review user verification requests."
+    >
 
-          title="Verification"
-
-          subtitle="Review user verification requests."
-
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 12,
+          marginBottom: 20,
+        }}
       >
 
-          <TableLayout
+        <select
+          value={statusFilter}
+          onChange={(e) =>
+            setStatusFilter(e.target.value)
+          }
+        >
+          <option value="all">
+            All Status
+          </option>
 
-              title="Verification Requests"
+          <option value="pending">
+            Pending
+          </option>
 
-              total={filteredUsers.length}
+          <option value="verified">
+            Verified
+          </option>
 
-              columns={columns}
+          <option value="rejected">
+            Rejected
+          </option>
 
-              data={filteredUsers}
+          <option value="not_verified">
+            Not Verified
+          </option>
 
-              loading={loading}
+        </select>
 
-              search={search}
+      </div>
 
-              onSearch={setSearch}
+      <TableLayout
 
-              onRefresh={loadUsers}
+        title="Verification Requests"
 
-              addLabel={null}
+        total={sortedUsers.length}
 
-              emptyMessage="No verification requests."
+        columns={columns}
 
-          />
+        data={sortedUsers}
 
-      </PageLayout>
+        loading={loading}
+
+        search={search}
+
+        onSearch={setSearch}
+
+        onRefresh={loadUsers}
+
+        addLabel={null}
+
+        emptyMessage="No verification requests."
+
+      />
+
+    </PageLayout>
 
   );
 

@@ -211,79 +211,71 @@ export const verificationColumns = ({
      STATUS
   ----------------------------------------- */
 
-  {
-    key: "status",
+ {
+  key: "status",
 
-    title: "Status",
+  title: "Status",
 
-    render: (user) => {
-  console.log(user);
+  render: (user) => {
 
-  console.log("Verification:", user.verification);
+    const status =
+      (
+        user.verification?.verificationStatus ||
+        "not_verified"
+      ).toLowerCase();
 
+    let background = "#ECEFF1";
+    let color = "#607D8B";
+    let Icon = MdShield;
+    let text = "Not Verified";
 
-      const status =
-    (user.verificationStatus || "").toLowerCase();
+    if (user.isVerified) {
 
-let background = "#ECEFF1";
-let color = "#607D8B";
-let Icon = MdShield;
-let text = "Not Submitted";
+      background = "#DCFCE7";
+      color = "#15803D";
+      Icon = MdVerified;
+      text = "Verified";
 
-if (user.isVerified) {
+    }
 
-    background = "#DCFCE7";
-    color = "#15803D";
-    Icon = MdVerified;
-    text = "Verified";
+    else if (status === "pending") {
 
-}
-else if (status === "pending") {
+      background = "#FEF3C7";
+      color = "#B45309";
+      Icon = MdHourglassTop;
+      text = "Pending Review";
 
-    background = "#FEF3C7";
-    color = "#B45309";
-    Icon = MdHourglassTop;
-    text = "Pending Review";
+    }
 
-}
-else if (status === "rejected") {
+    else if (status === "rejected") {
 
-    background = "#FEE2E2";
-    color = "#B91C1C";
-    Icon = MdGppBad;
-    text = "Rejected";
+      background = "#FEE2E2";
+      color = "#B91C1C";
+      Icon = MdGppBad;
+      text = "Rejected";
 
-}
-else if (status === "not_verified") {
+    }
 
-    background = "#ECEFF1";
-    color = "#607D8B";
-    Icon = MdShield;
-    text = "Not Verified";
+    return (
 
-}
+      <span
+        style={{
+          ...badgeStyle,
+          background,
+          color,
+        }}
+      >
+        <Icon />
 
-      return (
+        {text}
 
-        <span
-          style={{
-            ...badgeStyle,
-            background,
-            color,
-          }}
-        >
+      </span>
 
-          <Icon />
-
-          {text}
-
-        </span>
-
-      );
-
-    },
+    );
 
   },
+
+},
 
   /* -----------------------------------------
      ACTIONS
