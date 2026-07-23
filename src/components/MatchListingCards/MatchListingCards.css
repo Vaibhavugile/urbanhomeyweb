@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  background: #f2eaf8;
+}
+
+/* =========================
+   SWIPER WRAPPER
+========================= */
+
+.listing-wrapper {
+  width: 100%;
+  padding: 24px 0 60px;
+}
+
+.swiper {
+  padding-bottom: 45px;
+}
+
+/* =========================
+   FIX CARD HEIGHT GAP
+========================= */
+
+.swiper-slide {
+  height: auto !important;
+  display: flex;
+}
+
+.listing-card {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(129, 56, 236, 0.1);
+  box-shadow: 0 4px 24px rgba(129, 56, 236, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.listing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(129, 56, 236, 0.18);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.listing-image-section {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.listing-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.listing-card:hover .listing-image {
+  transform: scale(1.04);
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.listing-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto !important;
+  max-width: max-content;
+
+  padding: 5px 10px;
+  border-radius: 999px;
+
+  background: #8138EC;
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  z-index: 2;
+}
+
+/* =========================
+   BADGE VARIANTS
+========================= */
+
+.listing-badge.badge-hot {
+  background: #ef4444;
+}
+
+.listing-badge.badge-new {
+  background: #10b981;
+}
+
+.listing-badge.badge-trending {
+  background: #f59e0b;
+  color: #1a1a1a;
+}
+
+.listing-badge.badge-popular {
+  background: #D042B3;
+}
+
+/* =========================
+   LOCATION
+========================= */
+
+.listing-location {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.listing-content {
+  padding: 16px;
+}
+
+.listing-type {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #ede0f9;
+  color: #8138EC;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   TITLE ROW
+========================= */
+
+.listing-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.listing-title-row h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.4;
+}
+
+.listing-title-row h3 {
+  color: #D042B3;
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.listing-divider {
+  height: 1px;
+  background: #f0e4fa;
+  margin: 12px 0;
+}
+
+/* =========================
+   USERS
+========================= */
+
+.listing-user-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.listing-user-row p {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.listing-avatars {
+  display: flex;
+}
+
+.listing-avatars img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+  margin-left: -8px;
+  box-shadow: 0 0 0 1px rgba(129, 56, 236, 0.15);
+}
+
+.listing-avatars img:first-child {
+  margin-left: 0;
+}
+
+/* =========================
+   TAGS
+========================= */
+
+.listing-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.listing-tags span {
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: #f9f3fd;
+  border: 1px solid #e0caf2;
+  color: #8138EC;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #ddd0f0;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #8138EC;
+  width: 22px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .listing-image-section {
+    height: 190px;
+  }
+
+  .listing-content {
+    padding: 14px;
+  }
+
+  .listing-title-row h2,
+  .listing-title-row h3 {
+    font-size: 0.95rem;
+  }
+
+  .listing-badge {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+  .listing-tags span {
+    font-size: 9px;
+    padding: 4px 7px;
+  }
+}

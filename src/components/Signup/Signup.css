@@ -1,0 +1,537 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter",sans-serif;
+}
+
+.signup-container{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+
+  background:linear-gradient(
+    135deg,
+    #f2eaf8,
+    #e9d5f7,
+    #fdf0fb
+  );
+}
+
+.signup-card{
+  width:100%;
+  max-width:1200px;
+  min-height:750px;
+
+  display:flex;
+  overflow:hidden;
+
+  border-radius:30px;
+
+  background:#ffffff;
+
+  box-shadow:
+    0 20px 60px rgba(129,56,236,.12),
+    0 40px 100px rgba(0,0,0,.08);
+}
+
+.password-field{
+  position:relative;
+}
+
+.password-field input{
+  width:100%;
+  padding-right:50px;
+}
+
+.eye-icon{
+  position:absolute;
+  right:18px;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  cursor:pointer;
+  color:#9134E6;
+  font-size:18px;
+}
+
+.eye-icon:hover{
+  color:#8138EC;
+}
+
+/* LEFT SIDE */
+
+.signup-left{
+  flex:1;
+  position:relative;
+  overflow:hidden;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:60px;
+
+  background:linear-gradient(
+    135deg,
+    #f2eaf8,
+    #ede0f9,
+    #fdf0fb
+  );
+}
+
+/* Glow Effects */
+
+.signup-left::before{
+  content:"";
+  position:absolute;
+
+  width:420px;
+  height:420px;
+
+  border-radius:50%;
+
+  top:-120px;
+  right:-120px;
+
+  background:#ddb8f7;
+
+  opacity:.6;
+
+  filter:blur(120px);
+}
+
+.signup-left::after{
+  content:"";
+  position:absolute;
+
+  width:350px;
+  height:350px;
+
+  border-radius:50%;
+
+  bottom:-120px;
+  left:-120px;
+
+  background:#f0b8e8;
+
+  opacity:.5;
+
+  filter:blur(120px);
+}
+
+.brand-content{
+  max-width:500px;
+  position:relative;
+  z-index:2;
+}
+
+/* LOGO */
+.logo-badge{
+  display:inline-flex;
+
+  padding:10px 22px;
+
+  border-radius:999px;
+
+  background:linear-gradient(
+    135deg,
+    #8138EC,
+    #9134E6,
+    #D042B3
+  );
+
+  color:#ffffff;
+
+  font-size:15px;
+  font-weight:800;
+
+  letter-spacing:1px;
+  margin-bottom:12px;
+
+  width:fit-content;
+
+  box-shadow:
+    0 12px 30px rgba(129,56,236,.25);
+}
+
+.logo-badge:hover{
+  transform:translateY(-4px) scale(1.05);
+
+  box-shadow:
+    0 15px 35px rgba(129,56,236,.35);
+}
+
+/* HEADING */
+
+.brand-content h1{
+  font-size:2rem;
+  font-weight:800;
+
+  line-height:1.1;
+
+  color:#8138EC;
+
+  margin-bottom:18px;
+}
+
+.brand-content h1 span{
+  background:linear-gradient(
+    135deg,
+    #8138EC,
+    #D042B3
+  );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* PARAGRAPH */
+
+.brand-content > p{
+  font-size:15px;
+  line-height:1.8;
+
+  color:#6b4a8a;
+
+  margin-bottom:40px;
+}
+
+/* FEATURE CARDS */
+
+.feature-card{
+  display:flex;
+  align-items:center;
+
+  gap:16px;
+
+  padding:18px;
+
+  margin-bottom:18px;
+
+  background:white;
+
+  border:1px solid #e8d5f5;
+
+  border-radius:20px;
+
+  box-shadow:
+    0 10px 30px rgba(129,56,236,.06);
+
+  transition:.3s ease;
+}
+
+.feature-card:hover{
+  transform:translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(129,56,236,.12);
+}
+
+/* ICON */
+
+.feature-icon{
+  width:58px;
+  height:58px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:16px;
+
+  background:linear-gradient(
+    135deg,
+    #ede0f9,
+    #f9f3fd
+  );
+
+  font-size:26px;
+}
+
+/* CARD TEXT */
+
+.feature-card h4{
+  color:#4b2d7a;
+
+  font-size:16px;
+
+  margin-bottom:4px;
+}
+
+.feature-card p{
+  color:#6b4a8a;
+
+  font-size:14px;
+
+  line-height:1.6;
+}
+
+/* RIGHT SIDE */
+
+.signup-right{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+}
+
+.signup-box{
+  width:100%;
+  max-width:430px;
+}
+
+.signup-box h2{
+  font-size:2rem;
+
+  background:linear-gradient(
+    135deg,
+    #8138EC,
+    #D042B3
+  );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+  margin-top:8px;
+  margin-bottom:30px;
+  color:#6b7280;
+}
+
+/* =========================
+   SOCIAL LOGIN BUTTONS
+========================= */
+
+.social-login{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  gap:16px;
+  margin-top:20px;
+  margin-bottom:25px;
+}.social-btn{
+  width:56px;
+  height:56px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+
+  border-radius:50%;
+  border:1.5px solid #e0caf2;
+  background:#fff;
+}
+
+.social-btn img{
+  width:24px;
+  height:24px;
+  display:block;
+}
+
+.social-btn:hover{
+  transform:translateY(-3px);
+  background:#8138EC;
+  border-color:#8138EC;
+  box-shadow:0 10px 25px rgba(129,56,236,.25);
+}
+
+/* FIXED: turn coloured icons white on hover so they're visible on purple */
+.social-btn:hover img{
+  filter:brightness(0) invert(1);
+}
+
+@media (max-width:576px){
+  .social-login{
+    gap:14px;
+  }
+
+  .social-btn{
+    width:46px;
+    height:46px;
+  }
+}
+
+.divider{
+  position:relative;
+  text-align:center;
+  margin:25px 0;
+}
+
+.divider::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:1px;
+  background:#e0caf2;
+  top:50%;
+  left:0;
+}
+
+.divider span{
+  position:relative;
+  background:white;
+  padding:0 12px;
+  color:#b07fd4;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input{
+  padding:15px;
+  border:1.5px solid #e0caf2;
+  border-radius:14px;
+  font-size:15px;
+  background:#f9f3fd;
+  transition:.3s;
+}
+
+input:focus{
+  outline:none;
+  border-color:#8138EC;
+  background:#fff;
+  box-shadow:0 0 0 4px rgba(129,56,236,.1);
+}
+
+.create-btn{
+  border:none;
+  padding:16px;
+  border-radius:14px;
+
+  background:linear-gradient(
+    135deg,
+    #8138EC,
+    #D042B3
+  );
+
+  background-size:200% 200%;
+
+  color:white;
+  font-size:16px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:all .35s ease;
+
+  box-shadow:
+    0 10px 25px rgba(129,56,236,.25);
+}
+
+.create-btn:hover{
+  transform:translateY(-4px) scale(1.02);
+
+  background-position:right center;
+
+  box-shadow:
+    0 18px 40px rgba(208,66,179,.35),
+    0 8px 20px rgba(129,56,236,.25);
+}
+
+.create-btn:active{
+  transform:translateY(-1px) scale(.98);
+}
+
+.create-btn:disabled{
+  opacity:.8;
+  cursor:not-allowed;
+  transform:none;
+
+  box-shadow:
+    0 10px 25px rgba(129,56,236,.15);
+}
+
+.login-link{
+  text-align:center;
+  color:#6b4a8a;
+  margin-top:10px;
+}
+
+.login-link span{
+  color:#8138EC;
+  margin-left:6px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.login-link span:hover{
+  text-decoration:underline;
+}
+
+.btn-spinner{
+  width:16px;
+  height:16px;
+  border:2px solid rgba(255,255,255,.4);
+  border-top:2px solid #fff;
+  border-radius:50%;
+  animation:spin .8s linear infinite;
+  margin-right:8px;
+  display:inline-block;
+}
+
+@keyframes spin{
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes floatCard{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-10px); }
+  100%{ transform:translateY(0); }
+}
+
+@keyframes pulseGlow{
+  0%{ transform:scale(1); }
+  50%{ transform:scale(1.2); }
+  100%{ transform:scale(1); }
+}
+
+/* MOBILE */
+
+@media(max-width:992px){
+
+  .signup-card{
+    flex-direction:column;
+  }
+
+  .signup-left{
+    order:2;
+  }
+
+  .signup-right{
+    order:1;
+  }
+}
+
+@media(max-width:576px){
+
+  .brand-content h1{
+    font-size:2.2rem;
+  }
+
+  .feature-card{
+    padding:15px;
+  }
+
+  .signup-box h2{
+    font-size:1.8rem;
+  }
+}

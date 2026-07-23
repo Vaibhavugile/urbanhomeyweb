@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins",sans-serif;
+}
+
+body{
+  background:#dcebf6;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+}
+
+/* =========================
+   HOME GUIDE SECTION
+========================= */
+
+.home-guide{
+  width:100%;
+
+  padding:90px 20px;
+
+  text-align:center;
+
+  background:#ffffff;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.home-guide-title{
+  background:linear-gradient(
+    135deg,
+    #1e293b,
+    #4f46e5,
+    #8b5cf6
+  );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+
+  font-weight:700;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.home-guide-description{
+  max-width:720px;
+
+  margin:0 auto;
+
+  font-size:1.05rem;
+  line-height:1.8;
+
+  color:#4b5563;
+  font-weight:400;
+}
+
+/* =========================
+   OPTIONAL DECORATIVE LINE
+========================= */
+
+.home-guide::after{
+  content:"";
+
+  display:block;
+
+  width:90px;
+  height:4px;
+
+  margin:30px auto 0;
+
+  border-radius:20px;
+
+  background:linear-gradient(
+    90deg,
+    #635bff,
+    #8b5cf6
+  );
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width:992px){
+
+  .home-guide{
+    padding:80px 24px;
+  }
+
+  .home-guide-title{
+    font-size:2.5rem;
+  }
+
+  .home-guide-description{
+    font-size:1rem;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px){
+
+  .home-guide{
+    padding:70px 20px;
+  }
+
+  .home-guide-title{
+    font-size:2.1rem;
+    margin-bottom:16px;
+  }
+
+  .home-guide-description{
+    font-size:0.95rem;
+    line-height:1.75;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width:480px){
+
+  .home-guide{
+    padding:60px 18px;
+  }
+
+  .home-guide-title{
+    font-size:1.75rem;
+    line-height:1.25;
+  }
+
+  .home-guide-description{
+    font-size:0.9rem;
+    line-height:1.7;
+  }
+
+  .home-guide::after{
+    width:70px;
+  }
+}

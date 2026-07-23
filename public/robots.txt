@@ -1,0 +1,12 @@
+User-agent: *
+
+Allow: /
+
+Disallow: /dashboard
+Disallow: /profile
+Disallow: /profile/edit
+Disallow: /add-blog
+Disallow: /login
+Disallow: /signup
+
+Sitemap: https://www.urbanhomey.com/sitemap.xml

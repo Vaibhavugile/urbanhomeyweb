@@ -1,0 +1,103 @@
+.table-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.action-btn {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+
+    transition: all .25s ease;
+
+    background: #F8FAFC;
+
+    color: #6B7280;
+
+    border: 1px solid #E5E7EB;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+/* View */
+
+.action-btn.view:hover {
+    background: #EEF2FF;
+    color: #4F46E5;
+    border-color: #C7D2FE;
+}
+
+/* Edit */
+
+.action-btn.edit:hover {
+    background: #ECFDF5;
+    color: #059669;
+    border-color: #A7F3D0;
+}
+
+/* Verify */
+
+.action-btn.verify:hover {
+    background: #F0FDF4;
+    color: #16A34A;
+    border-color: #BBF7D0;
+}
+
+/* Suspend */
+
+.action-btn.block:hover {
+    background: #FEF3C7;
+    color: #B45309;
+    border-color: #FCD34D;
+}
+
+/* Delete */
+
+.action-btn.delete:hover {
+    background: #FEF2F2;
+    color: #DC2626;
+    border-color: #FECACA;
+}
+
+/* More */
+
+.action-btn.more:hover {
+    background: #F3F4F6;
+    color: #111827;
+}
+
+.action-btn svg {
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .table-actions {
+        gap: 6px;
+    }
+
+    .action-btn {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+}

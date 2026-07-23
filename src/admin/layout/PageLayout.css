@@ -1,0 +1,35 @@
+.page-layout{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.page-header h1{
+    font-size:32px;
+    font-weight:800;
+    color:#111827;
+}
+
+.page-header p{
+    margin-top:6px;
+    color:#6B7280;
+    font-size:15px;
+}
+
+.page-actions{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.page-body{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}

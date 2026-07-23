@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter",sans-serif;
+}
+
+/* =========================
+   TAGS CONTAINER
+========================= */
+
+.tags-container{
+  width:100%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+
+  margin:20px auto;
+
+  text-align:center;
+}
+
+/* =========================
+   TAG BUTTON
+========================= */
+
+.tag-btn{
+  border:none;
+  outline:none;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:6px;
+
+  padding:10px 16px;
+
+  border-radius:999px;
+
+  background:
+  rgba(99,102,241,0.08);
+
+  color:#4f46e5;
+
+  font-size:0.75rem;
+  font-weight:600;
+
+  letter-spacing:0.2px;
+
+  cursor:pointer;
+
+  backdrop-filter:blur(12px);
+
+  transition:all .3s ease;
+
+  box-shadow:
+  0 4px 12px rgba(99,102,241,.08);
+
+  white-space:nowrap;
+}
+
+/* =========================
+   ICON
+========================= */
+
+.tag-btn svg{
+  font-size:0.85rem;
+  color:#6366f1;
+
+  transition:.3s ease;
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.tag-btn:hover{
+  transform:
+  translateY(-3px);
+
+  background:
+  linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+
+  color:#fff;
+
+  box-shadow:
+  0 12px 24px rgba(99,102,241,.25);
+}
+
+.tag-btn:hover svg{
+  color:#fff;
+}
+
+/* =========================
+   ACTIVE
+========================= */
+
+.tag-btn:active{
+  transform:scale(.96);
+}
+
+/* =========================
+   DESKTOP LARGE
+========================= */
+
+@media(min-width:1200px){
+
+  .tags-container{
+    gap:12px;
+  }
+
+  .tag-btn{
+    padding:11px 18px;
+    font-size:0.8rem;
+  }
+
+  .tag-btn svg{
+    font-size:0.9rem;
+  }
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:768px){
+
+  .tags-container{
+    gap:8px;
+  }
+
+  .tag-btn{
+    padding:8px 12px;
+    font-size:0.68rem;
+  }
+
+  .tag-btn svg{
+    font-size:0.75rem;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:480px){
+
+  .tags-container{
+    gap:6px;
+    justify-content:center;
+  }
+
+  .tag-btn{
+    padding:7px 10px;
+
+    font-size:0.62rem;
+
+    border-radius:16px;
+  }
+
+  .tag-btn svg{
+    font-size:0.7rem;
+  }
+
+}

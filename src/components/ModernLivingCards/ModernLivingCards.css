@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Plus Jakarta Sans",sans-serif;
+}
+
+body{
+  background:#f8fbff;
+  overflow-x:hidden;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.modern-living-section{
+  width:100%;
+  padding:80px 20px;
+  background:
+  linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f5f8ff 100%
+  );
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.modern-living-section h1{
+  text-align:center;
+
+  font-size:clamp(1.5rem,3vw,2.4rem);
+  font-weight:800;
+
+  margin-bottom:60px;
+
+  color:#1e3a8a;
+
+  letter-spacing:-0.5px;
+
+  line-height:1.2;
+}
+
+.modern-living-section h1::after{
+  content:"";
+  display:block;
+
+  width:70px;
+  height:4px;
+
+  margin:12px auto 0;
+
+  border-radius:999px;
+
+  background:linear-gradient(
+    90deg,
+    #3b82f6,
+    #8b5cf6
+  );
+}
+
+/* =========================
+   GRID
+========================= */
+
+.modern-living-grid{
+  width:100%;
+  max-width:1150px;
+
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+
+  gap:24px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.modern-card{
+  position:relative;
+
+  min-height:250px;
+
+  padding:30px;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  border:1px solid rgba(255,255,255,.7);
+
+  backdrop-filter:blur(12px);
+
+  transition:.35s ease;
+
+  cursor:pointer;
+}
+
+.modern-card::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:rgba(255,255,255,.25);
+
+  opacity:0;
+
+  transition:.3s ease;
+}
+
+.modern-card:hover{
+  transform:translateY(-8px);
+
+  box-shadow:
+  0 18px 40px rgba(59,130,246,.12);
+}
+
+.modern-card:hover::before{
+  opacity:1;
+}
+
+/* =========================
+   CARD COLORS
+========================= */
+
+.blue-card{
+  background:
+  linear-gradient(
+    135deg,
+    rgba(219,234,254,.95),
+    rgba(239,246,255,.85)
+  );
+}
+
+.purple-card{
+  background:
+  linear-gradient(
+    135deg,
+    rgba(237,233,254,.95),
+    rgba(250,245,255,.85)
+  );
+}
+
+.orange-card{
+  background:
+  linear-gradient(
+    135deg,
+    rgba(255,237,213,.95),
+    rgba(255,247,237,.85)
+  );
+}
+
+/* =========================
+   ICON
+========================= */
+
+.modern-icon{
+  width:68px;
+  height:68px;
+
+  border-radius:20px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:1.6rem;
+
+  margin-bottom:24px;
+
+  background:rgba(255,255,255,.75);
+
+  backdrop-filter:blur(12px);
+
+  transition:.3s ease;
+}
+
+.modern-card:hover .modern-icon{
+  transform:scale(1.08) rotate(5deg);
+}
+
+.blue-card .modern-icon{
+  color:#2563eb;
+}
+
+.purple-card .modern-icon{
+  color:#7c3aed;
+}
+
+.orange-card .modern-icon{
+  color:#ea580c;
+}
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.modern-card h2{
+  font-size:clamp(1.1rem,2vw,1.5rem);
+  font-weight:700;
+
+  color:#0f172a;
+
+  margin-bottom:12px;
+
+  line-height:1.3;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.modern-card p{
+  font-size:0.92rem;
+
+  line-height:1.7;
+
+  color:#475569;
+
+  font-weight:500;
+
+  max-width:100%;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:992px){
+
+  .modern-living-section{
+    padding:70px 20px;
+  }
+
+  .modern-living-grid{
+    gap:20px;
+  }
+
+  .modern-card{
+    padding:26px;
+  }
+
+  .modern-icon{
+    width:62px;
+    height:62px;
+
+    font-size:1.4rem;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .modern-living-section{
+    padding:60px 18px;
+  }
+
+  .modern-living-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .modern-living-section h1{
+    font-size:1.8rem;
+    margin-bottom:40px;
+  }
+
+  .modern-card{
+    min-height:auto;
+    padding:24px;
+    border-radius:24px;
+  }
+
+  .modern-icon{
+    width:58px;
+    height:58px;
+
+    font-size:1.3rem;
+
+    margin-bottom:18px;
+  }
+
+  .modern-card h2{
+    font-size:1.15rem;
+  }
+
+  .modern-card p{
+    font-size:0.85rem;
+    line-height:1.6;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+  .modern-living-section{
+    padding:50px 14px;
+  }
+
+  .modern-living-section h1{
+    font-size:1.5rem;
+  }
+
+  .modern-card{
+    padding:20px;
+  }
+
+  .modern-icon{
+    width:52px;
+    height:52px;
+
+    font-size:1.2rem;
+  }
+
+  .modern-card h2{
+    font-size:1rem;
+  }
+
+  .modern-card p{
+    font-size:0.8rem;
+  }
+}

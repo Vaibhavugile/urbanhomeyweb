@@ -1,0 +1,926 @@
+.admin-btn.purple{
+
+    background:linear-gradient(
+        135deg,
+        #7C3AED,
+        #9333EA
+    );
+
+}
+
+.admin-btn.blue{
+
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #3B82F6
+    );
+
+}
+
+.admin-btn.green{
+
+    background:linear-gradient(
+        135deg,
+        #16A34A,
+        #22C55E
+    );
+
+}
+
+.admin-btn.orange{
+
+    background:linear-gradient(
+        135deg,
+        #EA580C,
+        #FB923C
+    );
+
+}
+
+.admin-btn.teal{
+
+    background:linear-gradient(
+        135deg,
+        #0891B2,
+        #06B6D4
+    );
+
+}
+
+.admin-btn.indigo{
+
+    background:linear-gradient(
+        135deg,
+        #4338CA,
+        #6366F1
+    );
+
+}
+
+.admin-btn.dark{
+
+    background:linear-gradient(
+        135deg,
+        #374151,
+        #111827
+    );
+
+}
+
+.admin-btn.red{
+
+    background:linear-gradient(
+        135deg,
+        #DC2626,
+        #EF4444
+    );
+
+}
+.property-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:18px;
+
+}
+
+.property-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:#F8FAFC;
+
+    border:1px solid #E5E7EB;
+
+    transition:.25s;
+
+}
+
+.property-item:hover{
+
+    transform:translateY(-3px);
+
+    background:white;
+
+    box-shadow:
+        0 12px 30px rgba(15,23,42,.08);
+
+}
+
+.property-item label{
+
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+    color:#6B7280;
+
+    font-weight:700;
+
+}
+
+.property-item strong{
+
+    font-size:16px;
+
+    color:#111827;
+
+    font-weight:700;
+
+    word-break:break-word;
+
+}
+
+.property-item.full-width{
+
+    grid-column:1/-1;
+
+}
+.sub-section-title{
+
+    font-size:20px;
+
+    font-weight:800;
+
+    color:#111827;
+
+    margin-bottom:18px;
+
+}
+.empty-text{
+
+    color:#9CA3AF;
+
+    font-size:15px;
+
+    font-style:italic;
+
+}
+/* ==========================================================
+   CHIP CONTAINER
+========================================================== */
+
+.chip-container{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-top:18px;
+
+}
+
+
+/* ==========================================================
+   COMMON CHIP
+========================================================== */
+
+.chip{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:all .28s ease;
+
+    cursor:default;
+
+    user-select:none;
+
+    border:1px solid transparent;
+
+    white-space:nowrap;
+
+    box-shadow:
+        0 4px 12px rgba(15,23,42,.05);
+
+}
+
+.chip:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 12px 24px rgba(15,23,42,.10);
+
+}
+
+
+/* ==========================================================
+   PURPLE
+========================================================== */
+
+.chip.purple{
+
+    background:#F3E8FF;
+
+    color:#7C3AED;
+
+    border-color:#DDD6FE;
+
+}
+
+.chip.purple:hover{
+
+    background:#7C3AED;
+
+    color:#fff;
+
+}
+
+
+/* ==========================================================
+   GREEN
+========================================================== */
+
+.chip.green{
+
+    background:#DCFCE7;
+
+    color:#166534;
+
+    border-color:#BBF7D0;
+
+}
+
+.chip.green:hover{
+
+    background:#16A34A;
+
+    color:#fff;
+
+}
+
+
+/* ==========================================================
+   RED
+========================================================== */
+
+.chip.red{
+
+    background:#FEE2E2;
+
+    color:#991B1B;
+
+    border-color:#FECACA;
+
+}
+
+.chip.red:hover{
+
+    background:#DC2626;
+
+    color:#fff;
+
+}
+
+
+/* ==========================================================
+   BLUE
+========================================================== */
+
+.chip.blue{
+
+    background:#DBEAFE;
+
+    color:#1D4ED8;
+
+    border-color:#BFDBFE;
+
+}
+
+.chip.blue:hover{
+
+    background:#2563EB;
+
+    color:#fff;
+
+}
+
+
+/* ==========================================================
+   ORANGE
+========================================================== */
+
+.chip.orange{
+
+    background:#FFEDD5;
+
+    color:#C2410C;
+
+    border-color:#FED7AA;
+
+}
+
+.chip.orange:hover{
+
+    background:#EA580C;
+
+    color:#fff;
+
+}
+
+
+/* ==========================================================
+   TEAL
+========================================================== */
+
+.chip.teal{
+
+    background:#CCFBF1;
+
+    color:#0F766E;
+
+    border-color:#99F6E4;
+
+}
+
+.chip.teal:hover{
+
+    background:#0D9488;
+
+    color:#fff;
+
+}
+/* ==========================================================
+   DIVIDER
+========================================================== */
+
+.section-divider{
+
+    margin:35px 0;
+
+    border:none;
+
+    border-top:1px solid #ECEFF5;
+
+}
+
+
+/* ==========================================================
+   FLEX ROW
+========================================================== */
+
+.flex-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* ==========================================================
+   ACTION GROUP
+========================================================== */
+
+.action-group{
+
+    display:flex;
+
+    gap:14px;
+
+    margin-top:24px;
+
+    flex-wrap:wrap;
+
+}
+@media(max-width:992px){
+
+.property-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.admin-actions-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.chip{
+
+    width:100%;
+
+    justify-content:flex-start;
+
+}
+
+.action-group{
+
+    flex-direction:column;
+
+}
+
+.action-group button{
+
+    width:100%;
+
+}
+
+}
+/* ==========================================================
+   PROFILE HERO
+========================================================== */
+
+.profilehero{
+
+    display:grid;
+
+    grid-template-columns:420px 1fr;
+
+    gap:40px;
+
+    padding:32px;
+
+    background:#FFFFFF;
+
+    border:1px solid #ECEFF5;
+
+    border-radius:30px;
+
+    box-shadow:
+        0 18px 45px rgba(15,23,42,.06);
+
+    margin-bottom:40px;
+
+    align-items:flex-start;
+
+}
+
+
+/* ==========================================================
+   LEFT GALLERY
+========================================================== */
+
+.profilehero-gallery{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.profilehero-main-image{
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    background:#F8FAFC;
+
+    border:1px solid #EEF2F7;
+
+}
+
+.profilehero-main-image img{
+
+    width:100%;
+
+    height:460px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.35s;
+
+}
+
+.profilehero-main-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+
+/* ==========================================================
+   RIGHT CONTENT
+========================================================== */
+
+.profilehero-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.profilehero-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+
+.profilehero-type{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:#F3E8FF;
+
+    color:#7C3AED;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.profilehero-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.profilehero-status.verified{
+
+    background:#DCFCE7;
+
+    color:#166534;
+
+}
+
+.profilehero-status.pending{
+
+    background:#FEE2E2;
+
+    color:#991B1B;
+
+}
+
+
+/* ==========================================================
+   NAME
+========================================================== */
+
+.profilehero-name{
+
+    margin:0;
+
+    font-size:48px;
+
+    font-weight:900;
+
+    line-height:1.1;
+
+    color:#111827;
+
+}
+
+
+/* ==========================================================
+   BUDGET
+========================================================== */
+
+.profilehero-budget{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+}
+
+.budget-min{
+
+    font-size:54px;
+
+    font-weight:900;
+
+    color:#111827;
+
+    line-height:1;
+
+}
+
+.budget-separator{
+
+    font-size:36px;
+
+    color:#9CA3AF;
+
+    font-weight:700;
+
+}
+
+.budget-max{
+
+    font-size:34px;
+
+    color:#7C3AED;
+
+    font-weight:800;
+
+}
+
+
+/* ==========================================================
+   LOCATION
+========================================================== */
+
+.profilehero-location{
+
+    color:#6B7280;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+
+/* ==========================================================
+   BADGES
+========================================================== */
+
+.profilehero-badges{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.profilehero-badges span{
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:#F8FAFC;
+
+    border:1px solid #E5E7EB;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:#374151;
+
+    transition:.25s;
+
+}
+
+.profilehero-badges span:hover{
+
+    background:#7C3AED;
+
+    color:#fff;
+
+    border-color:#7C3AED;
+
+}
+
+
+/* ==========================================================
+   INFO GRID
+========================================================== */
+
+.profilehero-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:8px;
+
+}
+
+.profilehero-box{
+
+    background:#F8FAFC;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    transition:.28s;
+
+}
+
+.profilehero-box:hover{
+
+    background:#FFFFFF;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(15,23,42,.08);
+
+}
+
+.profilehero-box label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.6px;
+
+    color:#6B7280;
+
+    font-weight:700;
+
+}
+
+.profilehero-box strong{
+
+    display:block;
+
+    font-size:18px;
+
+    color:#111827;
+
+    font-weight:800;
+
+    line-height:1.4;
+
+}
+
+
+/* ==========================================================
+   ACTIONS
+========================================================== */
+
+.profilehero-actions{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:10px;
+
+    flex-wrap:wrap;
+
+}
+
+.profilehero-actions .primary-btn,
+
+.profilehero-actions .secondary-btn{
+
+    min-width:220px;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1200px){
+
+.profilehero{
+
+    grid-template-columns:1fr;
+
+}
+
+.profilehero-main-image img{
+
+    height:420px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.profilehero{
+
+    padding:22px;
+
+    gap:24px;
+
+}
+
+.profilehero-name{
+
+    font-size:36px;
+
+}
+
+.budget-min{
+
+    font-size:42px;
+
+}
+
+.budget-max{
+
+    font-size:28px;
+
+}
+
+.profilehero-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.profilehero-actions{
+
+    flex-direction:column;
+
+}
+
+.profilehero-actions button{
+
+    width:100%;
+
+}
+
+.profilehero-main-image img{
+
+    height:320px;
+
+}
+
+.profilehero-badges span{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+}

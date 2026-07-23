@@ -1,0 +1,31 @@
+{
+  "hosting": {
+    "public": "build",
+
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+
+    "redirects": [
+      {
+        "source": "/pages/about-us",
+        "destination": "/about",
+        "type": 301
+      },
+      {
+        "source": "/en-gb",
+        "destination": "/",
+        "type": 301
+      }
+    ],
+
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

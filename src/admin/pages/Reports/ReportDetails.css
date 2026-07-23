@@ -1,0 +1,436 @@
+/* ==========================================================
+   PAGE
+========================================================== */
+
+.report-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+    padding-bottom:40px;
+
+}
+
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+.details-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:24px;
+
+    font-weight:800;
+
+    color:#111827;
+
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.report-hero{
+
+    display:grid;
+
+    grid-template-columns:220px 1fr;
+
+    gap:30px;
+
+    background:#FFFFFF;
+
+    border:1px solid #ECEFF5;
+
+    border-radius:24px;
+
+    padding:24px;
+
+    box-shadow:
+        0 10px 30px rgba(15,23,42,.05);
+
+    transition:.3s;
+
+}
+
+.report-hero:hover{
+
+    box-shadow:
+        0 18px 40px rgba(15,23,42,.08);
+
+}
+
+
+/* ==========================================================
+   USER IMAGE
+========================================================== */
+
+.report-user-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.report-user-image img{
+
+    width:200px;
+
+    height:200px;
+
+    border-radius:24px;
+
+    object-fit:cover;
+
+    border:3px solid #F1F5F9;
+
+    background:#F8FAFC;
+
+    transition:.3s;
+
+}
+
+.report-user-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+/* ==========================================================
+   SUMMARY
+========================================================== */
+
+.report-summary{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.report-reason{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    width:max-content;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:#FEF3C7;
+
+    color:#B45309;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    margin-bottom:16px;
+
+}
+
+.report-summary h1{
+
+    margin:0;
+
+    font-size:38px;
+
+    font-weight:900;
+
+    color:#111827;
+
+    line-height:1.15;
+
+}
+
+.report-description{
+
+    margin:16px 0;
+
+    color:#6B7280;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    max-width:760px;
+
+}
+
+
+/* ==========================================================
+   BADGES
+========================================================== */
+
+.report-badges{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:10px;
+
+}
+
+.report-badges span{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:#F8FAFC;
+
+    border:1px solid #E5E7EB;
+
+    color:#374151;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.report-badges span:hover{
+
+    background:#EEF2FF;
+
+    border-color:#C7D2FE;
+
+    color:#4338CA;
+
+}
+
+
+/* ==========================================================
+   STATUS COLORS
+========================================================== */
+
+.report-status{
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.report-status.pending{
+
+    background:#FEF3C7;
+
+    color:#B45309;
+
+}
+
+.report-status.reviewing{
+
+    background:#DBEAFE;
+
+    color:#1D4ED8;
+
+}
+
+.report-status.resolved{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+}
+
+.report-status.rejected{
+
+    background:#FEE2E2;
+
+    color:#B91C1C;
+
+}
+
+
+/* ==========================================================
+   DETAILS CARD
+========================================================== */
+
+.details-card{
+
+    background:#FFFFFF;
+
+    border:1px solid #ECEFF5;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    box-shadow:
+        0 8px 24px rgba(15,23,42,.04);
+
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.property-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:16px;
+
+}
+
+.property-item{
+
+    background:#FAFBFC;
+
+    border:1px solid #EEF2F7;
+
+    border-radius:16px;
+
+    padding:16px;
+
+    transition:.25s;
+
+}
+
+.property-item:hover{
+
+    background:#FFFFFF;
+
+    border-color:#D6DAE3;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 10px 20px rgba(15,23,42,.05);
+
+}
+
+.property-item label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    color:#9CA3AF;
+
+    letter-spacing:.8px;
+
+    text-transform:uppercase;
+
+}
+
+.property-item strong{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    line-height:1.5;
+
+    word-break:break-word;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:992px){
+
+    .report-hero{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .report-user-image{
+
+        justify-content:flex-start;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .report-summary h1{
+
+        font-size:30px;
+
+    }
+
+    .report-user-image img{
+
+        width:160px;
+
+        height:160px;
+
+    }
+
+    .property-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .report-badges span{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}

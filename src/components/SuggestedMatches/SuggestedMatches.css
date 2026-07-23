@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter",sans-serif;
+}
+
+body{
+  background:
+  linear-gradient(
+    180deg,
+    #f8faff 0%,
+    #ffffff 100%
+  );
+  overflow-x:hidden;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.matches-section{
+  width:100%;
+  padding:40px 24px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.matches-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:28px;
+  gap:10px;
+}
+
+.matches-header h1{
+  font-size:clamp(1.3rem,2vw,2rem);
+  font-weight:800;
+  color:#111827;
+  letter-spacing:-0.5px;
+}
+
+.matches-header button{
+  border:none;
+  background:none;
+  cursor:pointer;
+
+  font-size:0.9rem;
+  font-weight:700;
+
+  color:#6366f1;
+
+  transition:all .3s ease;
+}
+
+.matches-header button:hover{
+  color:#4f46e5;
+  transform:translateX(4px);
+}
+
+/* =========================
+   DRAGGABLE CONTAINER
+========================= */
+
+.matches-container{
+  display:flex;
+  gap:20px;
+
+  overflow-x:auto;
+  overflow-y:hidden;
+
+  scroll-behavior:smooth;
+  cursor:grab;
+
+  padding:10px 4px 20px;
+
+  scrollbar-width:none;
+}
+
+.matches-container::-webkit-scrollbar{
+  display:none;
+}
+
+.matches-container:active{
+  cursor:grabbing;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.match-card{
+  position:relative;
+
+  min-width:290px;
+  max-width:290px;
+  height:380px;
+
+  flex-shrink:0;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  cursor:pointer;
+
+  background:#fff;
+
+  transition:all .4s ease;
+
+  box-shadow:
+  0 10px 30px rgba(99,102,241,.08),
+  0 8px 20px rgba(0,0,0,.08);
+}
+
+.match-card:hover{
+  transform:
+  translateY(-10px)
+  scale(1.02);
+
+  box-shadow:
+  0 25px 45px rgba(99,102,241,.18),
+  0 20px 35px rgba(0,0,0,.12);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.match-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  transition:transform .6s ease;
+}
+
+.match-card:hover img{
+  transform:scale(1.08);
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,.92) 12%,
+    rgba(0,0,0,.35) 45%,
+    rgba(0,0,0,.05) 100%
+  );
+}
+
+/* =========================
+   ROLE TAG
+========================= */
+
+.role-tag{
+  position:absolute;
+
+  top:14px;
+  right:14px;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  background:
+  rgba(255,255,255,.15);
+
+  backdrop-filter:blur(14px);
+
+  border:1px solid rgba(255,255,255,.18);
+
+  color:#fff;
+
+  font-size:0.7rem;
+  font-weight:700;
+
+  letter-spacing:.5px;
+
+  z-index:10;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.card-content{
+  position:absolute;
+
+  left:18px;
+  right:18px;
+  bottom:18px;
+
+  z-index:10;
+
+  color:white;
+}
+
+.card-content h2{
+  font-size:1.45rem;
+  font-weight:700;
+  line-height:1.2;
+
+  margin-bottom:8px;
+}
+
+/* =========================
+   MATCH SCORE
+========================= */
+
+.match-score{
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  font-size:0.82rem;
+  font-weight:500;
+
+  color:rgba(255,255,255,.92);
+}
+
+.match-score svg{
+  color:#ff5a7a;
+}
+
+/* =========================
+   LIKE BUTTON
+========================= */
+
+.match-card::after{
+  content:"❤";
+
+  position:absolute;
+
+  top:14px;
+  left:14px;
+
+  width:40px;
+  height:40px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+  rgba(255,255,255,.18);
+
+  backdrop-filter:blur(12px);
+
+  color:white;
+
+  font-size:16px;
+
+  z-index:10;
+
+  transition:.3s ease;
+}
+
+.match-card:hover::after{
+  background:#ff4f79;
+  transform:scale(1.1);
+}
+
+/* =========================
+   DESKTOP LARGE
+========================= */
+
+@media (min-width:1400px){
+
+  .matches-section{
+    padding:50px 60px;
+  }
+
+  .match-card{
+    min-width:330px;
+    max-width:330px;
+    height:430px;
+  }
+
+  .card-content h2{
+    font-size:1.7rem;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width:768px){
+
+  .matches-section{
+    padding:30px 16px;
+  }
+
+  .match-card{
+    min-width:250px;
+    max-width:250px;
+    height:340px;
+  }
+
+  .card-content h2{
+    font-size:1.2rem;
+  }
+
+  .match-score{
+    font-size:.75rem;
+  }
+
+  .role-tag{
+    font-size:.62rem;
+    padding:7px 12px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:480px){
+
+  .matches-section{
+    padding:24px 14px;
+  }
+
+  .matches-header h1{
+    font-size:1.2rem;
+  }
+
+  .matches-header button{
+    font-size:.78rem;
+  }
+
+  .matches-container{
+    gap:14px;
+  }
+
+  .match-card{
+    min-width:220px;
+    max-width:220px;
+    height:290px;
+
+    border-radius:24px;
+  }
+
+  .card-content{
+    left:14px;
+    right:14px;
+    bottom:14px;
+  }
+
+  .card-content h2{
+    font-size:1rem;
+  }
+
+  .match-score{
+    font-size:.7rem;
+  }
+
+  .role-tag{
+    font-size:.58rem;
+    padding:6px 10px;
+  }
+}

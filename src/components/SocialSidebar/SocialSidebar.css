@@ -1,0 +1,132 @@
+/* ===== Social Sidebar ===== */
+
+.social-sidebar {
+  position: fixed;
+  right: 20px;
+  top: 60%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;  /* add this */
+}
+
+/* Each icon + popup wrapper */
+.social-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Icon Button */
+.social-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.social-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+}
+
+/* Popup Card */
+.social-popup {
+  position: absolute;
+  right: 60px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 170px;
+  animation: popIn 0.18s ease;
+}
+
+.social-popup::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 8px 0 8px 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}
+
+.popup-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Popup Buttons */
+.popup-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: opacity 0.15s ease;
+}
+
+.popup-btn:hover {
+  opacity: 0.88;
+}
+
+.chat-btn {
+  color: #fff;
+}
+
+.profile-btn {
+  background: #f1f1f1;
+  color: #333;
+}
+
+/* Responsive — smaller on mobile */
+@media (max-width: 480px) {
+  .social-sidebar {
+    right: 12px;
+    gap: 10px;
+  }
+
+  .social-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+
+  .social-popup {
+    min-width: 150px;
+    right: 52px;
+  }
+}

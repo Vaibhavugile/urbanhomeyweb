@@ -1,0 +1,371 @@
+/* ==========================================================
+   PAGE
+========================================================== */
+
+.flat-listings-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+}
+
+
+/* ==========================================================
+   STATS
+========================================================== */
+
+.listing-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,minmax(0,1fr));
+
+    gap:20px;
+}
+
+.listing-stat-card{
+
+    background:white;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    transition:.3s;
+
+    box-shadow:
+        0 8px 24px rgba(15,23,42,.05);
+}
+
+.listing-stat-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#DDD6FE;
+
+    box-shadow:
+        0 18px 35px rgba(15,23,42,.10);
+}
+
+.listing-stat-title{
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:#6B7280;
+
+    margin-bottom:12px;
+}
+
+.listing-stat-value{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#111827;
+}
+
+.listing-stat-change{
+
+    margin-top:12px;
+
+    font-size:13px;
+
+    color:#16A34A;
+
+    font-weight:600;
+}
+
+
+/* ==========================================================
+   FILTER BAR
+========================================================== */
+
+.listing-toolbar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.listing-toolbar-left{
+
+    display:flex;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+    align-items:center;
+}
+
+.listing-toolbar-right{
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:center;
+}
+
+
+/* ==========================================================
+   SEARCH
+========================================================== */
+
+.listing-search{
+
+    width:340px;
+
+    height:48px;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:14px;
+
+    padding:0 18px;
+
+    font-size:14px;
+
+    transition:.25s;
+
+    background:white;
+}
+
+.listing-search:focus{
+
+    outline:none;
+
+    border-color:#7C3AED;
+
+    box-shadow:
+        0 0 0 4px rgba(124,58,237,.12);
+}
+
+
+/* ==========================================================
+   SELECTS
+========================================================== */
+
+.listing-select{
+
+    min-width:170px;
+
+    height:48px;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:14px;
+
+    background:white;
+
+    padding:0 16px;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.listing-select:focus{
+
+    outline:none;
+
+    border-color:#7C3AED;
+}
+
+
+/* ==========================================================
+   TABLE WRAPPER
+========================================================== */
+
+.listing-table-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    border:1px solid #E5E7EB;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 10px 30px rgba(15,23,42,.05);
+}
+
+
+/* ==========================================================
+   TABLE IMAGE
+========================================================== */
+
+.listing-thumb{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+    border:2px solid #F3F4F6;
+}
+
+
+/* ==========================================================
+   OWNER
+========================================================== */
+
+.listing-owner{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+.listing-owner h4{
+
+    margin:0;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#111827;
+}
+
+.listing-owner p{
+
+    margin-top:4px;
+
+    font-size:13px;
+
+    color:#6B7280;
+}
+
+
+/* ==========================================================
+   BADGES
+========================================================== */
+
+.listing-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:7px 14px;
+
+    border-radius:999px;
+
+    background:#EEF2FF;
+
+    color:#4F46E5;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.listing-price{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        135deg,
+        #7C3AED,
+        #9333EA
+    );
+
+    color:white;
+
+    font-weight:700;
+
+    font-size:13px;
+}
+
+
+/* ==========================================================
+   EMPTY
+========================================================== */
+
+.listing-empty{
+
+    padding:70px;
+
+    text-align:center;
+
+    color:#9CA3AF;
+
+    font-size:16px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1200px){
+
+.listing-stats{
+
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.listing-stats{
+
+    grid-template-columns:1fr;
+}
+
+.listing-toolbar{
+
+    flex-direction:column;
+
+    align-items:stretch;
+}
+
+.listing-toolbar-left{
+
+    flex-direction:column;
+}
+
+.listing-search{
+
+    width:100%;
+}
+
+.listing-select{
+
+    width:100%;
+}
+
+}

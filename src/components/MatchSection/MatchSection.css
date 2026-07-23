@@ -1,0 +1,1165 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+
+:root {
+  --brand-gradient:
+    linear-gradient(
+      90deg,
+      #7b3ff2 0%,
+      #a13fea 50%,
+      #f24ba5 100%
+    );
+}
+
+
+/* =========================
+   MATCH SECTION
+========================= */
+
+.match-section {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    80px
+    0
+    60px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f8f6ff 0%,
+      #f0e8ff 100%
+    );
+}
+
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.match-header-section {
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding:
+    0
+    7%
+    45px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 40px;
+}
+
+
+/* =========================
+   HEADER TEXT
+========================= */
+
+.match-text {
+  max-width: 820px;
+}
+
+
+.match-text h2 {
+  margin:
+    0 0
+    16px;
+
+  color: #111827;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size:
+    clamp(
+      2rem,
+      3.5vw,
+      3.2rem
+    );
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  letter-spacing: -1.3px;
+}
+
+
+.match-text h2::after {
+  content: "";
+
+  display: block;
+
+  width: 75px;
+  height: 4px;
+
+  margin-top: 19px;
+
+  border-radius: 999px;
+
+  background:
+    var(--brand-gradient);
+}
+
+
+.match-text p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 0.98rem;
+
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   EXPLORE MATCHES LINK
+========================= */
+
+.matches-btn {
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 50px;
+
+  padding:
+    13px
+    22px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  color: #ffffff;
+
+  background:
+    var(--brand-gradient);
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 0.92rem;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px
+    rgba(123, 63, 242, 0.2);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+.matches-btn svg {
+  flex-shrink: 0;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.matches-btn:hover {
+  color: #ffffff;
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 16px 34px
+    rgba(123, 63, 242, 0.32);
+}
+
+
+.matches-btn:hover svg {
+  transform:
+    translateX(4px);
+}
+
+
+.matches-btn:active {
+  transform:
+    translateY(-1px);
+}
+
+
+.matches-btn:focus-visible {
+  outline:
+    3px solid
+    rgba(123, 63, 242, 0.35);
+
+  outline-offset: 5px;
+}
+
+
+/* =========================
+   CARDS WRAPPER
+========================= */
+
+.match-wrapper {
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding:
+    10px
+    0
+    20px;
+}
+
+
+/* =========================
+   SWIPER
+========================= */
+
+.match-wrapper .swiper {
+  width: 100%;
+
+  margin: 0;
+
+  padding:
+    12px
+    24px
+    52px;
+}
+
+
+.match-wrapper .swiper-wrapper {
+  align-items: stretch;
+}
+
+
+.match-wrapper .swiper-slide {
+  height: auto;
+
+  display: flex;
+}
+
+
+/* =========================
+   SWIPER PAGINATION
+========================= */
+
+.match-wrapper .swiper-pagination {
+  bottom: 5px !important;
+}
+
+
+.match-wrapper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+
+  margin:
+    0
+    4px !important;
+
+  border-radius: 999px;
+
+  background: #d4b8f7;
+
+  opacity: 1;
+
+  transition:
+    width 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.match-wrapper .swiper-pagination-bullet-active {
+  width: 24px;
+
+  background: #7b3ff2;
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.main-card {
+  position: relative;
+
+  width: 100%;
+
+  min-width: 0;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(123, 63, 242, 0.1);
+
+  border-radius: 26px;
+
+  background: #111827;
+
+  box-shadow:
+    0 12px 30px
+    rgba(17, 24, 39, 0.12);
+
+  user-select: none;
+
+  touch-action: pan-y;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.main-card:hover {
+  border-color:
+    rgba(123, 63, 242, 0.35);
+
+  transform:
+    translateY(-7px);
+
+  box-shadow:
+    0 24px 50px
+    rgba(17, 24, 39, 0.18);
+}
+
+
+/* =========================
+   IMAGE SECTION
+========================= */
+
+.profile-image-section {
+  position: relative;
+
+  width: 100%;
+  height: 500px;
+
+  overflow: hidden;
+}
+
+
+.profile-image-section > img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.55s ease;
+}
+
+
+.main-card:hover
+.profile-image-section > img {
+  transform:
+    scale(1.045);
+}
+
+
+/* =========================
+   IMAGE OVERLAY
+========================= */
+
+.profile-image-section::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(8, 10, 18, 0.96) 0%,
+      rgba(8, 10, 18, 0.76) 32%,
+      rgba(8, 10, 18, 0.38) 56%,
+      rgba(8, 10, 18, 0.04) 78%
+    );
+}
+
+
+/* =========================
+   MATCH BADGE
+========================= */
+
+.top-badges {
+  position: absolute;
+
+  top: 17px;
+  right: 17px;
+
+  z-index: 4;
+}
+
+
+.match-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    7px
+    13px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.25);
+
+  border-radius: 999px;
+
+  color: #ffffff;
+
+  background:
+    var(--brand-gradient);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.02em;
+
+  box-shadow:
+    0 7px 18px
+    rgba(123, 63, 242, 0.28);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.card-content {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 3;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding:
+    22px
+    20px
+    21px;
+}
+
+
+/* =========================
+   PROFILE HEADING
+========================= */
+
+.card-content h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 1.65rem;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.4px;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.location {
+  width: 100%;
+
+  margin: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.location-icon {
+  flex-shrink: 0;
+
+  color: #f24ba5;
+
+  font-size: 17px;
+}
+
+
+.location-text {
+  overflow: hidden;
+
+  color: #f8fafc;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   INTEREST TAGS
+========================= */
+
+.interest-tags {
+  width: 100%;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+
+.interest-tags span {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    6px
+    11px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.28);
+
+  border-radius: 999px;
+
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.14);
+
+  backdrop-filter:
+    blur(8px);
+
+  -webkit-backdrop-filter:
+    blur(8px);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 0.7rem;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.interest-tags span:hover {
+  border-color: transparent;
+
+  background:
+    var(--brand-gradient);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================
+   EXPLORE MATCHES LINK
+========================= */
+
+.view-btn {
+  width: 100%;
+
+  min-height: 43px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 2px;
+
+  padding:
+    11px
+    15px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  color: #ffffff;
+
+  background:
+    var(--brand-gradient);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 0.86rem;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.01em;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+.view-btn:hover {
+  color: #ffffff;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 10px 24px
+    rgba(123, 63, 242, 0.34);
+}
+
+
+.view-btn:active {
+  transform:
+    scale(0.98);
+}
+
+
+.view-btn:focus-visible {
+  outline:
+    3px solid
+    rgba(255, 255, 255, 0.65);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================
+   SAMPLE PROFILE BADGE
+========================= */
+
+.verified-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  width: fit-content;
+
+  padding:
+    6px
+    11px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.2);
+
+  border-radius: 999px;
+
+  color:
+    rgba(255, 255, 255, 0.9);
+
+  background:
+    rgba(255, 255, 255, 0.12);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 0.63rem;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.5px;
+
+  backdrop-filter:
+    blur(8px);
+
+  -webkit-backdrop-filter:
+    blur(8px);
+}
+
+
+.verified-badge::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #f59e0b;
+}
+
+
+/* =========================
+   SMALL DESKTOP
+========================= */
+
+@media (max-width: 1100px) {
+
+  .match-section {
+    padding-top: 70px;
+  }
+
+
+  .match-header-section {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+
+  .profile-image-section {
+    height: 470px;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .match-section {
+    padding:
+      65px
+      0
+      50px;
+  }
+
+
+  .match-header-section {
+    padding:
+      0
+      22px
+      38px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 26px;
+  }
+
+
+  .match-text {
+    max-width: 100%;
+  }
+
+
+  .match-text h2 {
+    font-size:
+      clamp(
+        1.85rem,
+        6vw,
+        2.5rem
+      );
+
+    letter-spacing: -1px;
+  }
+
+
+  .match-text p {
+    font-size: 0.92rem;
+
+    line-height: 1.75;
+  }
+
+
+  .matches-btn {
+    width: 100%;
+
+    min-height: 48px;
+  }
+
+
+  .match-wrapper {
+    overflow: hidden;
+  }
+
+
+  .match-wrapper .swiper {
+    width: 100%;
+
+    padding:
+      10px
+      16px
+      50px;
+  }
+
+
+  .match-wrapper .swiper-slide {
+    width: auto !important;
+  }
+
+
+  .profile-image-section {
+    height: 440px;
+  }
+
+
+  .card-content {
+    padding:
+      19px
+      17px
+      18px;
+  }
+
+
+  .card-content h3 {
+    font-size: 1.4rem;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .match-section {
+    padding:
+      55px
+      0
+      42px;
+  }
+
+
+  .match-header-section {
+    padding:
+      0
+      16px
+      30px;
+
+    gap: 22px;
+  }
+
+
+  .match-text h2 {
+    margin-bottom: 14px;
+
+    font-size:
+      clamp(
+        1.65rem,
+        7.5vw,
+        2.1rem
+      );
+
+    line-height: 1.2;
+
+    letter-spacing: -0.7px;
+  }
+
+
+  .match-text h2::after {
+    width: 65px;
+    height: 3px;
+
+    margin-top: 16px;
+  }
+
+
+  .match-text p {
+    font-size: 0.86rem;
+
+    line-height: 1.7;
+  }
+
+
+  .matches-btn {
+    min-height: 46px;
+
+    padding:
+      12px
+      17px;
+
+    border-radius: 12px;
+
+    font-size: 0.86rem;
+  }
+
+
+  .match-wrapper .swiper {
+    padding:
+      8px
+      14px
+      46px;
+  }
+
+
+  .main-card {
+    border-radius: 21px;
+  }
+
+
+  .profile-image-section {
+    height: 420px;
+  }
+
+
+  .top-badges {
+    top: 14px;
+    right: 14px;
+  }
+
+
+  .match-badge {
+    padding:
+      6px
+      11px;
+
+    font-size: 0.66rem;
+  }
+
+
+  .card-content {
+    gap: 8px;
+
+    padding:
+      17px
+      15px
+      16px;
+  }
+
+
+  .card-content h3 {
+    font-size: 1.25rem;
+  }
+
+
+  .location-text {
+    font-size: 0.83rem;
+  }
+
+
+  .location-icon {
+    font-size: 15px;
+  }
+
+
+  .interest-tags {
+    gap: 6px;
+  }
+
+
+  .interest-tags span {
+    padding:
+      5px
+      9px;
+
+    font-size: 0.65rem;
+  }
+
+
+  .view-btn {
+    min-height: 41px;
+
+    padding: 10px;
+
+    font-size: 0.81rem;
+  }
+
+
+  .verified-badge {
+    padding:
+      5px
+      9px;
+
+    font-size: 0.58rem;
+  }
+
+
+  .main-card:hover {
+    transform: none;
+  }
+
+
+  .main-card:hover
+  .profile-image-section > img {
+    transform: none;
+  }
+
+}
+
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+
+  .match-header-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  .match-wrapper .swiper {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  .profile-image-section {
+    height: 390px;
+  }
+
+
+  .card-content {
+    padding:
+      15px
+      13px;
+  }
+
+
+  .card-content h3 {
+    font-size: 1.15rem;
+  }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .matches-btn,
+  .matches-btn svg,
+  .main-card,
+  .profile-image-section > img,
+  .interest-tags span,
+  .view-btn,
+  .match-wrapper .swiper-pagination-bullet {
+    transition: none;
+  }
+
+
+  .matches-btn:hover,
+  .main-card:hover,
+  .interest-tags span:hover,
+  .view-btn:hover {
+    transform: none;
+  }
+
+
+  .main-card:hover
+  .profile-image-section > img {
+    transform: none;
+  }
+
+}
+

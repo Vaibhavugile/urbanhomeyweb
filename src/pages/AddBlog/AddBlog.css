@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#f6f8fc;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.add-blog{
+  max-width:900px;
+  margin:40px auto;
+  background:#fff;
+  border-radius:24px;
+  padding:32px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.08);
+  border:1px solid #edf0f7;
+}
+
+.add-blog::before{
+  content:"Create New Blog";
+  display:block;
+  font-size:2rem;
+  font-weight:700;
+  color:#4f46e5;
+  margin-bottom:30px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.add-blog input,
+.add-blog textarea{
+  width:100%;
+  padding:14px 16px;
+  border:1.5px solid #e4e7ec;
+  border-radius:14px;
+  font-size:0.95rem;
+  outline:none;
+  transition:0.3s ease;
+  margin-bottom:18px;
+  background:#fafbff;
+}
+
+.add-blog input:focus,
+.add-blog textarea:focus{
+  border-color:#6366f1;
+  background:#fff;
+  box-shadow:0 0 0 4px rgba(99,102,241,0.12);
+}
+
+.add-blog textarea{
+  resize:vertical;
+  min-height:220px;
+  line-height:1.7;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.add-blog button{
+  width:100%;
+  border:none;
+  cursor:pointer;
+  padding:15px;
+  border-radius:14px;
+  font-size:1rem;
+  font-weight:600;
+  color:#fff;
+  background:linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+  transition:0.3s ease;
+}
+
+.add-blog button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(99,102,241,0.3);
+}
+
+.add-blog button:active{
+  transform:scale(.98);
+}
+
+/* =========================
+   TWO COLUMN LAYOUT
+========================= */
+
+.add-blog .row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+/* =========================
+   LABELS
+========================= */
+
+.field-group{
+  margin-bottom:18px;
+}
+
+.field-group label{
+  display:block;
+  font-size:.9rem;
+  font-weight:600;
+  color:#374151;
+  margin-bottom:8px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .add-blog{
+    margin:16px;
+    padding:20px;
+    border-radius:18px;
+  }
+
+  .add-blog::before{
+    font-size:1.5rem;
+    margin-bottom:24px;
+  }
+
+  .add-blog .row{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .add-blog input,
+  .add-blog textarea{
+    font-size:14px;
+    padding:13px 14px;
+  }
+
+  .add-blog button{
+    padding:14px;
+  }
+}
