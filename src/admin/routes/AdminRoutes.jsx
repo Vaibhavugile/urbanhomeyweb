@@ -17,6 +17,8 @@ import Matches from "../pages/Matches/Matches";
 import MatchDetails from "../pages/Matches/MatchDetails";
 import ChatPlans from "../pages/ChatPlans/ChatPlans";
 import AddChatPlan from "../pages/ChatPlans/AddChatPlan";
+import ListingImageVerification from "../pages/ListingImageVerification/ListingImageVerification";
+import ListingImageVerificationDetails from "../pages/ListingImageVerification/ListingImageVerificationDetails";
 function AdminRoutes() {
   return (
     <Routes>
@@ -57,6 +59,15 @@ function AdminRoutes() {
         path="reports"
         element={<Reports />}
       />
+      <Route
+  path="listing-image-verification"
+  element={<ListingImageVerification />}
+/>
+
+<Route
+  path="listing-image-verification/:id"
+  element={<ListingImageVerificationDetails />}
+/>
       <Route
     path="reports/:reportId"
     element={<ReportDetails />}

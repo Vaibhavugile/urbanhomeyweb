@@ -6,10 +6,8 @@ import {
   MdPeople,
   MdHomeWork,
   MdVerifiedUser,
-  MdChat,
+  MdImage,
   MdPayments,
-  MdArticle,
-  MdCampaign,
   MdSupportAgent,
   MdSettings,
   MdReport,
@@ -45,6 +43,11 @@ const menuItems = [
     path: "/admin/verification",
     icon: <MdVerifiedUser />,
   },
+  {
+  title: "Listing Images",
+  path: "/admin/listing-image-verification",
+  icon: <MdImage />,
+},
 
   {
     title: "Payments",
