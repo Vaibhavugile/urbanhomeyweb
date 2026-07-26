@@ -48,6 +48,11 @@ const menuItems = [
   path: "/admin/listing-image-verification",
   icon: <MdImage />,
 },
+{
+  title: "Profile Images",
+  path: "/admin/profile-image-verification",
+  icon: <MdPeople />,
+},
 
   {
     title: "Payments",

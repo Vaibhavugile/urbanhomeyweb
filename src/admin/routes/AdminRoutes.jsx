@@ -19,6 +19,8 @@ import ChatPlans from "../pages/ChatPlans/ChatPlans";
 import AddChatPlan from "../pages/ChatPlans/AddChatPlan";
 import ListingImageVerification from "../pages/ListingImageVerification/ListingImageVerification";
 import ListingImageVerificationDetails from "../pages/ListingImageVerification/ListingImageVerificationDetails";
+import ProfileImageVerification from "../pages/ProfileImageVerification/ProfileImageVerification";
+import ProfileImageVerificationDetails from "../pages/ProfileImageVerification/ProfileImageVerificationDetails";
 function AdminRoutes() {
   return (
     <Routes>
@@ -86,6 +88,14 @@ function AdminRoutes() {
 <Route
     path="chat-plans/edit/:planId"
     element={<AddChatPlan />}
+/>
+<Route
+  path="profile-image-verification"
+  element={<ProfileImageVerification />}
+/>
+<Route
+  path="profile-image-verification/:id"
+  element={<ProfileImageVerificationDetails />}
 />
 
       <Route
