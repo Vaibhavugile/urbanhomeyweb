@@ -86,7 +86,8 @@ import Terms from "./pages/Terms/Terms";
 
 import Downloadpage from "./components/Downloadpage/Downloadpage";
 import AdminApp from "./admin/AdminApp";
-
+import AdminSignup from "./admin/pages/AdminSignup/AdminSignup";
+import AdminLogin from "./admin/pages/AdminLogin/AdminLogin";
 /* =========================================================
    WEBSITE CONSTANTS
 ========================================================= */
@@ -860,6 +861,10 @@ function AppRoutes() {
   path="/city/:citySlug"
   element={<CityPage />}
 />
+<Route
+  path="/admin/signup"
+  element={<AdminSignup />}
+/>
 
         {/* =================================================
             BLOGS
@@ -935,11 +940,19 @@ function AppRoutes() {
 
             KEEP THIS ROUTE LAST.
         ================================================= */}
- <Route path="/admin/*" element={<AdminApp />} />
-        <Route
-          path="*"
-          element={<NotFoundPage />}
-        />
+{/* =================================================
+    ADMIN
+================================================= */}
+
+<Route
+  path="/admin/login"
+  element={<AdminLogin />}
+/>
+
+<Route
+  path="/admin/*"
+  element={<AdminApp />}
+/>
 
       </Routes>
     </>

@@ -84,14 +84,27 @@ export async function approveProfileImage(
     user.documentPath
   );
 
+  const pendingPhoto =
+    user.pendingProfilePhotoUrl;
+
+  if (!pendingPhoto) {
+
+    throw new Error(
+      "No pending profile photo found."
+    );
+
+  }
+
   await updateDoc(ref, {
 
     profilePhotoUrl:
-      user.pendingProfileImageUrl,
+      pendingPhoto,
 
-    pendingProfileImageUrl: null,
+    pendingProfilePhotoUrl:
+      null,
 
-    profileImageVerification: true,
+    profileImageVerification:
+      true,
 
     profileImageVerificationStatus:
       "approved",
@@ -121,9 +134,11 @@ export async function rejectProfileImage(
 
   await updateDoc(ref, {
 
-    pendingProfileImageUrl: null,
+    pendingProfilePhotoUrl:
+      null,
 
-    profileImageVerification: false,
+    profileImageVerification:
+      false,
 
     profileImageVerificationStatus:
       "rejected",

@@ -1,0 +1,221 @@
+*{
+  box-sizing:border-box;
+}
+
+.admin-login-page{
+
+  min-height:100vh;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:40px;
+
+  background:
+  linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8,
+      #0f172a
+  );
+
+}
+
+.admin-login-card{
+
+  width:100%;
+
+  max-width:430px;
+
+  background:#fff;
+
+  border-radius:24px;
+
+  padding:45px;
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,.18);
+
+}
+
+.admin-login-logo{
+
+  text-align:center;
+
+  margin-bottom:40px;
+
+}
+
+.admin-logo-circle{
+
+  width:90px;
+
+  height:90px;
+
+  margin:auto;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:32px;
+
+  font-weight:700;
+
+  color:#fff;
+
+  background:
+  linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8
+  );
+
+  box-shadow:
+  0 10px 30px rgba(37,99,235,.35);
+
+}
+
+.admin-login-logo h2{
+
+  margin-top:20px;
+
+  margin-bottom:6px;
+
+  font-size:30px;
+
+  color:#111827;
+
+}
+
+.admin-login-logo p{
+
+  color:#6b7280;
+
+  font-size:15px;
+
+}
+
+.admin-login-form{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:22px;
+
+}
+
+.admin-form-group{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:8px;
+
+}
+
+.admin-form-group label{
+
+  font-size:14px;
+
+  font-weight:600;
+
+  color:#374151;
+
+}
+
+.admin-form-group input{
+
+  height:52px;
+
+  border:1px solid #d1d5db;
+
+  border-radius:14px;
+
+  padding:0 18px;
+
+  font-size:15px;
+
+  transition:.25s;
+
+  outline:none;
+
+}
+
+.admin-form-group input:focus{
+
+  border-color:#2563eb;
+
+  box-shadow:
+  0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+.admin-login-btn{
+
+  height:55px;
+
+  margin-top:8px;
+
+  border:none;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  color:#fff;
+
+  background:
+  linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8
+  );
+
+  transition:.25s;
+
+}
+
+.admin-login-btn:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:
+  0 15px 30px rgba(37,99,235,.30);
+
+}
+
+.admin-login-btn:active{
+
+  transform:scale(.98);
+
+}
+
+@media(max-width:600px){
+
+.admin-login-page{
+
+padding:20px;
+
+}
+
+.admin-login-card{
+
+padding:30px;
+
+}
+
+}

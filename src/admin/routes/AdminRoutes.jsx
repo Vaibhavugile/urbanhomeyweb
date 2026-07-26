@@ -21,6 +21,10 @@ import ListingImageVerification from "../pages/ListingImageVerification/ListingI
 import ListingImageVerificationDetails from "../pages/ListingImageVerification/ListingImageVerificationDetails";
 import ProfileImageVerification from "../pages/ProfileImageVerification/ProfileImageVerification";
 import ProfileImageVerificationDetails from "../pages/ProfileImageVerification/ProfileImageVerificationDetails";
+import Roles from "../pages/Roles/Roles";
+import AddRole from "../pages/Roles/AddRole";
+import AdminUsers from "../pages/AdminUsers/AdminUsers";
+import AddAdminUser from "../pages/AdminUsers/AddAdminUser";
 function AdminRoutes() {
   return (
     <Routes>
@@ -41,6 +45,20 @@ function AdminRoutes() {
         path="listings"
         element={<FlatListings />}
       />
+      <Route
+  path="roles"
+  element={<Roles />}
+/>
+
+<Route
+  path="roles/add"
+  element={<AddRole />}
+/>
+
+<Route
+  path="roles/edit/:roleId"
+  element={<AddRole />}
+/>
 
       <Route
         path="flatmates"
@@ -120,6 +138,20 @@ function AdminRoutes() {
       <Route
     path="payments/:paymentId"
     element={<PaymentDetails />}
+/>
+<Route
+  path="admin-users"
+  element={<AdminUsers />}
+/>
+
+<Route
+  path="admin-users/add"
+  element={<AddAdminUser />}
+/>
+
+<Route
+  path="admin-users/edit/:adminUserId"
+  element={<AddAdminUser />}
 />
     <Route
   path="listings/:uid/:listingId"
